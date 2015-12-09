@@ -5,12 +5,19 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>1.2.3.RELEASE</version>
+		<!-- 
+		<version><version>1.2.7.RELEASE</version></version>
+		 -->
+		<version>1.3.1.BUILD-SNAPSHOT</version>
 	</parent>
 	<artifactId>sample-spring-boot</artifactId>
 	<name>Spring Boot Sample</name>
 	<description>Spring Boot Sample</description>
-
+<!-- 
+	<properties>
+		<spring.version>4.1.9.BUILD-SNAPSHOT</spring.version>
+	</properties>
+ -->
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -32,4 +39,15 @@
 			</plugin>
 		</plugins>
 	</build>
+
+	<repositories>
+		<repository>
+			<id>spring-snapshots</id>
+			<name>Spring Snapshots</name>
+			<url>http://repo.spring.io/snapshot</url>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+		</repository>
+	</repositories>
 </project>
